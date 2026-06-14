@@ -163,6 +163,7 @@ a { color: inherit; text-decoration: none; }
 .year-modules { display: none; }
 .year-modules.is-active { display: flex; flex-direction: column; gap: 0.2rem; }
 .year-modules p { font-family: var(--f-mono); font-size: 0.82rem; color: var(--slate); }
+.year-overall { color: var(--accent) !important; margin-bottom: 0.5rem; }
 
 /* ---------- TIMELINE / EXPERIENCE ---------- */
 .timeline { list-style: none; display: flex; flex-direction: column; gap: 2.5rem; }
