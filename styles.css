@@ -145,6 +145,24 @@ a { color: inherit; text-decoration: none; }
 .edu-item__school { color: var(--slate); }
 .edu-item__years { font-family: var(--f-mono); font-size: 0.8rem; color: var(--accent); margin: 0.3rem 0; }
 .edu-item__note { font-size: 0.92rem; color: var(--slate); }
+.edu-item__bullets { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+.edu-item__bullets li { position: relative; padding-left: 1.1rem; font-size: 0.92rem; color: var(--slate); }
+.edu-item__bullets li::before { content: "-"; position: absolute; left: 0; color: var(--accent-2); }
+
+.year-tabs { display: flex; gap: 0.4rem; margin-top: 0.75rem; flex-wrap: wrap; }
+.year-tab {
+  font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.08em;
+  padding: 0.3rem 0.7rem; border: 1px solid var(--line);
+  background: transparent; border-radius: 2px; cursor: pointer;
+  color: var(--slate); transition: all 0.2s;
+}
+.year-tab:hover { border-color: var(--accent); color: var(--ink); }
+.year-tab.is-active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.year-content { display: none; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--line); }
+.year-content.is-visible { display: block; }
+.year-modules { display: none; }
+.year-modules.is-active { display: flex; flex-direction: column; gap: 0.2rem; }
+.year-modules p { font-family: var(--f-mono); font-size: 0.82rem; color: var(--slate); }
 
 /* ---------- TIMELINE / EXPERIENCE ---------- */
 .timeline { list-style: none; display: flex; flex-direction: column; gap: 2.5rem; }
