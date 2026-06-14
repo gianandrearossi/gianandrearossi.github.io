@@ -1,5 +1,5 @@
 /* ============================================================
-   Gian Andrea Rossi — portfolio styles  (DARK THEME)
+   Gian Andrea Rossi - portfolio styles  (DARK THEME)
    Palette:  bg #0b1220 · surface #121a2b · raised #18223a
              ink #eef2f8 · slate #9aa6bd · accent #4da3ff (azure)
              accent-2 #6fe3c4 · line rgba(255,255,255,.09)
@@ -159,7 +159,7 @@ a { color: inherit; text-decoration: none; }
 .exp__role { color: var(--accent); font-weight: 500; margin: 0.1rem 0 0.6rem; }
 .exp__points { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
 .exp__points li { position: relative; padding-left: 1.1rem; font-size: 0.95rem; color: var(--slate); }
-.exp__points li::before { content: "—"; position: absolute; left: 0; color: var(--accent-2); }
+.exp__points li::before { content: "-"; position: absolute; left: 0; color: var(--accent-2); }
 
 /* ---------- PROJECT FILTERS ---------- */
 .filters { display: flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
