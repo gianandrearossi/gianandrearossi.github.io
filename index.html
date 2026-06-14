@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PLACEHOLDER — one-line description of you for search engines and link previews." />
+  <title>Gian Andrea — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <a href="#top" class="nav__brand">GA</a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="assets/docs/CV.pdf" class="nav__cv">CV &rarr;</a>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <!-- Optional background video: drop a file in assets/video/ and uncomment.
+    <video class="hero__bg" autoplay muted loop playsinline>
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+    -->
+    <div class="hero__inner">
+      <p class="hero__eyebrow">PLACEHOLDER — short tagline / specialism</p>
+      <h1 class="hero__name">Gian Andrea</h1>
+      <p class="hero__sub">PLACEHOLDER — degree, institution, one line on what you do.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll down">&darr;</a>
+  </section>
+
+  <main>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <p class="section__num">01</p>
+      <h2 class="section__title">About</h2>
+      <div class="about">
+        <div class="about__lead">
+          <p>PLACEHOLDER — two or three sentences on who you are, what you study, and the through-line connecting your varied experiences.</p>
+          <p>PLACEHOLDER — a second paragraph: current focus, what you're looking for, or what drives your work.</p>
+          <p class="about__meta">Languages: PLACEHOLDER &nbsp;&middot;&nbsp; Location: PLACEHOLDER</p>
+        </div>
+        <aside class="about__edu">
+          <h3>Education</h3>
+          <div class="edu-item">
+            <p class="edu-item__degree">PLACEHOLDER — Degree</p>
+            <p class="edu-item__school">PLACEHOLDER — Institution</p>
+            <p class="edu-item__years">20XX &ndash; 20XX</p>
+            <p class="edu-item__note">PLACEHOLDER — focus areas, grade, relevant coursework.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <p class="section__num">02</p>
+      <h2 class="section__title">Experience</h2>
+      <ol class="timeline">
+        <!-- Duplicate one <li> per role -->
+        <li class="exp">
+          <div class="exp__logo" aria-hidden="true"></div>
+          <div class="exp__body">
+            <div class="exp__head">
+              <h3 class="exp__org">PLACEHOLDER — Organisation</h3>
+              <span class="exp__dates">Mon 20XX &ndash; Mon 20XX</span>
+            </div>
+            <p class="exp__role">PLACEHOLDER — Role title</p>
+            <ul class="exp__points">
+              <li>PLACEHOLDER — what you did and the impact.</li>
+              <li>PLACEHOLDER — a second bullet, ideally with a concrete result.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="exp">
+          <div class="exp__logo" aria-hidden="true"></div>
+          <div class="exp__body">
+            <div class="exp__head">
+              <h3 class="exp__org">PLACEHOLDER — Organisation</h3>
+              <span class="exp__dates">Mon 20XX &ndash; Mon 20XX</span>
+            </div>
+            <p class="exp__role">PLACEHOLDER — Role title</p>
+            <ul class="exp__points">
+              <li>PLACEHOLDER — what you did and the impact.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <p class="section__num">03</p>
+      <h2 class="section__title">Projects</h2>
+
+      <div class="filters" role="tablist">
+        <button class="filter is-active" data-filter="all">All</button>
+        <button class="filter" data-filter="computational">Computational</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="other">Other</button>
+      </div>
+
+      <div class="grid">
+        <!-- Duplicate one <article> per project. data-cat must match a filter. -->
+        <article class="card" data-cat="computational">
+          <div class="card__thumb" aria-hidden="true"></div>
+          <div class="card__body">
+            <span class="card__tag">PLACEHOLDER — Category</span>
+            <h3 class="card__title">PLACEHOLDER — Project Name</h3>
+            <p class="card__date">Mon 20XX</p>
+            <p class="card__desc">PLACEHOLDER — one or two sentences: what it is, what you built, the result.</p>
+            <div class="card__links">
+              <a href="#">GitHub &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="web">
+          <div class="card__thumb" aria-hidden="true"></div>
+          <div class="card__body">
+            <span class="card__tag">PLACEHOLDER — Category</span>
+            <h3 class="card__title">PLACEHOLDER — Project Name</h3>
+            <p class="card__date">Mon 20XX</p>
+            <p class="card__desc">PLACEHOLDER — short description.</p>
+            <div class="card__links">
+              <a href="#">GitHub &rarr;</a>
+              <a href="#">Live &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="other">
+          <div class="card__thumb" aria-hidden="true"></div>
+          <div class="card__body">
+            <span class="card__tag">PLACEHOLDER — Category</span>
+            <h3 class="card__title">PLACEHOLDER — Project Name</h3>
+            <p class="card__date">Mon 20XX</p>
+            <p class="card__desc">PLACEHOLDER — short description.</p>
+            <div class="card__links">
+              <a href="#">Report &rarr;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <p class="section__num">04</p>
+      <h2 class="section__title">Skills</h2>
+      <div class="skills">
+        <div class="skills__group">
+          <h3>Languages</h3>
+          <p>PLACEHOLDER &middot; PLACEHOLDER &middot; PLACEHOLDER</p>
+        </div>
+        <div class="skills__group">
+          <h3>Scientific / Data</h3>
+          <p>PLACEHOLDER &middot; PLACEHOLDER</p>
+        </div>
+        <div class="skills__group">
+          <h3>Web / Tools</h3>
+          <p>PLACEHOLDER &middot; PLACEHOLDER</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact">
+      <p class="section__num">05</p>
+      <h2 class="section__title">Get in Touch</h2>
+      <p class="contact__lead">PLACEHOLDER — one line inviting people to reach out.</p>
+      <div class="contact__links">
+        <a href="mailto:PLACEHOLDER@example.com" class="btn btn--primary">Email Me</a>
+        <a href="#" class="btn btn--ghost">GitHub</a>
+        <a href="#" class="btn btn--ghost">LinkedIn</a>
+        <a href="assets/docs/CV.pdf" class="btn btn--ghost">View CV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Gian Andrea. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
