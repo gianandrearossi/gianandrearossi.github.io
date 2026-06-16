@@ -197,14 +197,15 @@ a { color: inherit; text-decoration: none; }
 /* ---------- PROJECT GRID ---------- */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
 .card {
+  position: relative;
   background: var(--surface); border: 1px solid var(--line);
   border-radius: 8px; overflow: hidden;
   display: flex; flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, filter 0.3s, opacity 0.3s;
 }
 .card:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -18px rgba(0,0,0,0.6); border-color: rgba(77,163,255,.4); }
 .card.is-hidden { display: none; }
-.card__thumb { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--raised), #0e1626); }
+.card__thumb { position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, var(--raised), #0e1626); }
 .card__body { padding: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
 .card__tag { font-family: var(--f-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-2); }
 .card__title { font-family: var(--f-display); font-weight: 500; font-size: 1.2rem; }
@@ -213,6 +214,26 @@ a { color: inherit; text-decoration: none; }
 .card__links { display: flex; gap: 1rem; margin-top: 0.5rem; }
 .card__links a { font-size: 0.85rem; font-weight: 500; color: var(--accent); }
 .card__links a:hover { text-decoration: underline; }
+
+/* ---------- CARD EXPAND & HOVER FX ---------- */
+.card__expand-btn {
+  position: absolute; top: 0.5rem; right: 0.5rem; z-index: 1;
+  width: 28px; height: 28px; padding: 0;
+  background: rgba(11,18,32,0.75); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px; color: var(--slate); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.2s, color 0.2s, background 0.2s;
+}
+.card:hover .card__expand-btn,
+.card.is-expanded .card__expand-btn { opacity: 1; }
+.card__expand-btn:hover { color: var(--ink); background: rgba(11,18,32,0.95); }
+.card__expand-btn .icon--close { display: none; }
+.card.is-expanded .card__expand-btn .icon--expand { display: none; }
+.card.is-expanded .card__expand-btn .icon--close { display: block; }
+.card.is-expanded { grid-column: span 3; flex-direction: row; }
+.card.is-expanded .card__thumb { width: 45%; flex-shrink: 0; aspect-ratio: auto; }
+.card.is-expanded .card__body { padding: 2rem; justify-content: center; }
+.grid:has(.card:hover) .card:not(:hover) { filter: grayscale(1); opacity: 0.5; }
 
 /* ---------- SKILLS ---------- */
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }

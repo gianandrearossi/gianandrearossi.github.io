@@ -26,6 +26,17 @@ document.getElementById("year").textContent = new Date().getFullYear();
 const filters = document.querySelectorAll(".filter");
 const cards = document.querySelectorAll(".card");
 
+// Card expand
+document.querySelectorAll('.card__expand-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const card = btn.closest('.card');
+    const expanding = !card.classList.contains('is-expanded');
+    document.querySelectorAll('.card.is-expanded').forEach(c => c.classList.remove('is-expanded'));
+    if (expanding) card.classList.add('is-expanded');
+  });
+});
+
 filters.forEach((btn) => {
   btn.addEventListener("click", () => {
     filters.forEach((f) => f.classList.remove("is-active"));
@@ -35,6 +46,7 @@ filters.forEach((btn) => {
     cards.forEach((card) => {
       const show = cat === "all" || card.dataset.cat === cat;
       card.classList.toggle("is-hidden", !show);
+      if (!show) card.classList.remove("is-expanded");
     });
   });
 });
