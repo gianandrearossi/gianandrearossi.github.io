@@ -242,6 +242,12 @@ a { color: inherit; text-decoration: none; }
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
 .skills__group h3 { font-family: var(--f-display); font-weight: 500; margin-bottom: 0.5rem; }
 .skills__group p { font-family: var(--f-mono); font-size: 0.85rem; color: var(--slate); line-height: 1.9; }
+.skills__group--certs { grid-column: 1 / -1; }
+.certs__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem 3rem; margin-top: 0.25rem; }
+.certs__item { font-family: var(--f-mono); font-size: 0.85rem; color: var(--slate); line-height: 1.9; }
+.certs__links { margin-left: 0.4rem; }
+.cert-link { color: var(--accent); text-decoration: none; font-size: 0.8rem; margin-left: 0.3rem; }
+.cert-link:hover { text-decoration: underline; }
 
 /* ---------- CONTACT ---------- */
 .section--contact { text-align: center; }
