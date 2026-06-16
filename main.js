@@ -33,7 +33,10 @@ document.querySelectorAll('.card__expand-btn').forEach(btn => {
     const card = btn.closest('.card');
     const expanding = !card.classList.contains('is-expanded');
     document.querySelectorAll('.card.is-expanded').forEach(c => c.classList.remove('is-expanded'));
-    if (expanding) card.classList.add('is-expanded');
+    if (expanding) {
+      card.classList.add('is-expanded');
+      requestAnimationFrame(() => card.scrollIntoView({ behavior: 'smooth', block: 'center' }));
+    }
   });
 });
 
