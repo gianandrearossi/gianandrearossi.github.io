@@ -40,8 +40,6 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
     current = ((n % slides.length) + slides.length) % slides.length;
     slides[current].classList.add('carousel__slide--active');
     dots[current].classList.add('carousel__dot--active');
-    const nextVideo = slides[current].querySelector('video');
-    if (nextVideo) nextVideo.play();
   }
 
   carousel._reset = () => { if (current !== 0) goTo(0); };
