@@ -231,7 +231,7 @@ a { color: inherit; text-decoration: none; }
 .card__expand-btn .icon--close { display: none; }
 .card.is-expanded .card__expand-btn .icon--expand { display: none; }
 .card.is-expanded .card__expand-btn .icon--close { display: block; }
-.card.is-expanded { grid-column: span 3; flex-direction: row; align-self: start; min-height: 220px; }
+.card.is-expanded { grid-column: span 3; flex-direction: row; }
 .card.is-expanded .card__thumb { flex: 2; width: auto; flex-shrink: 0; aspect-ratio: auto; }
 .card.is-expanded .card__body { flex: 1; padding: 1.5rem; justify-content: center; }
 .grid:has(.card:hover) .card:not(:hover) { filter: grayscale(1); opacity: 0.5; }

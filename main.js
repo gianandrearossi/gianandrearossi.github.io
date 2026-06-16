@@ -32,9 +32,14 @@ document.querySelectorAll('.card__expand-btn').forEach(btn => {
     e.stopPropagation();
     const card = btn.closest('.card');
     const expanding = !card.classList.contains('is-expanded');
-    document.querySelectorAll('.card.is-expanded').forEach(c => c.classList.remove('is-expanded'));
+    document.querySelectorAll('.card.is-expanded').forEach(c => {
+      c.classList.remove('is-expanded');
+      c.style.height = '';
+    });
     if (expanding) {
+      const h = card.offsetHeight;
       card.classList.add('is-expanded');
+      card.style.height = h + 'px';
       requestAnimationFrame(() => card.scrollIntoView({ behavior: 'smooth', block: 'center' }));
     }
   });
@@ -49,7 +54,7 @@ filters.forEach((btn) => {
     cards.forEach((card) => {
       const show = cat === "all" || card.dataset.cat === cat;
       card.classList.toggle("is-hidden", !show);
-      if (!show) card.classList.remove("is-expanded");
+      if (!show) { card.classList.remove("is-expanded"); card.style.height = ''; }
     });
   });
 });
