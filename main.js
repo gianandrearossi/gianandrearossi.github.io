@@ -32,9 +32,18 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
   const dots = Array.from(carousel.querySelectorAll('.carousel__dot'));
   let current = 0;
 
+  function resetVideoSlide(slide) {
+    const video = slide.querySelector('video');
+    if (!video) return;
+    video.pause();
+    video.currentTime = 0;
+    video.controls = false;
+    const btn = slide.querySelector('.carousel__play-btn');
+    if (btn) btn.classList.remove('is-hidden');
+  }
+
   function goTo(n) {
-    const prevVideo = slides[current].querySelector('video');
-    if (prevVideo) { prevVideo.pause(); prevVideo.currentTime = 0; }
+    resetVideoSlide(slides[current]);
     slides[current].classList.remove('carousel__slide--active');
     dots[current].classList.remove('carousel__dot--active');
     current = ((n % slides.length) + slides.length) % slides.length;
@@ -42,7 +51,24 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
     dots[current].classList.add('carousel__dot--active');
   }
 
-  carousel._reset = () => { if (current !== 0) goTo(0); };
+  carousel._reset = () => {
+    resetVideoSlide(slides[current]);
+    if (current !== 0) goTo(0);
+  };
+
+  carousel.querySelectorAll('.carousel__play-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const video = btn.closest('.carousel__slide').querySelector('video');
+      if (video.dataset.src && !video.src) {
+        video.src = video.dataset.src;
+        video.load();
+      }
+      video.play();
+      video.controls = true;
+      btn.classList.add('is-hidden');
+    });
+  });
 
   carousel.querySelector('.carousel__btn--prev').addEventListener('click', e => { e.stopPropagation(); goTo(current - 1); });
   carousel.querySelector('.carousel__btn--next').addEventListener('click', e => { e.stopPropagation(); goTo(current + 1); });
