@@ -214,6 +214,8 @@ a { color: inherit; text-decoration: none; }
 .card__title { font-family: var(--f-display); font-weight: 500; font-size: 1.2rem; }
 .card__date { font-family: var(--f-mono); font-size: 0.75rem; color: var(--slate); }
 .card__desc { font-size: 0.92rem; color: var(--slate); flex: 1; }
+.card__desc--more { display: none; }
+.card.is-expanded .card__desc--more { display: block; }
 .card__links { display: flex; gap: 1rem; margin-top: 0.5rem; }
 .card__links a { font-size: 0.85rem; font-weight: 500; color: var(--accent); }
 .card__links a:hover { text-decoration: underline; }
