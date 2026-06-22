@@ -234,8 +234,8 @@
             <span class="card__tag">Computational</span>
             <h3 class="card__title">Wind Farm Analysis</h3>
             <p class="card__date">2025 - 2026</p>
-            <p class="card__desc">Analysed wind farm energy yield, capacity factors, and layout optimisation as part of the Sustainable Energy Systems module.</p>
-            <p class="card__desc card__desc--more">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p class="card__desc">Modelled the annual capacity factor of the Post Oak Wind LLC plant (Abilene, TX) - 98 &times; Gamesa G87-2.0 turbines, 200&nbsp;MW - using the actuator disk model and hourly wind data.</p>
+            <p class="card__desc card__desc--more">The model gave a rotor-shaft capacity factor of 21.77%; EIA-923 gross generation data gives 30.40% (39.74% adjusted for gearbox and generator losses), with the gap attributed mainly to Cp simplification. A parametric sweep showed that uprating each turbine from 2&nbsp;MW to 6.5&nbsp;MW maximises additional annual energy yield, beyond which the wind resource is fully captured and capacity factor falls monotonically with further uprating.</p>
             <div class="card__links">
               <a href="https://github.com/gianandrearossi/wind-turbine-capacity-factor-analysis" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
             </div>
@@ -248,8 +248,8 @@
             <span class="card__tag">Computational</span>
             <h3 class="card__title">CFD Convection Scheme Solver</h3>
             <p class="card__date">2025 - 2026</p>
-            <p class="card__desc">Implemented and benchmarked Central Difference, Upwind Difference, and Power-Law Differencing Scheme discretisations for convection-diffusion problems in Python.</p>
-            <p class="card__desc card__desc--more">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p class="card__desc">Implemented and benchmarked three FVM discretisation schemes - CDS, UDS, and PLDS - for the steady 1-D convection-diffusion equation in Python, solved via the Tri-Diagonal Matrix Algorithm and validated against the analytical solution.</p>
+            <p class="card__desc card__desc--more">CDS is accurate at Pe&#8202;&lt;&#8202;2 but diverges above that threshold; UDS is unconditionally stable but introduces numerical diffusion causing a systematic offset (error 0.5–5%); PLDS offers the best compromise, remaining stable across all conditions with errors of 0.001–1%. An optimal local Pe&#8202;≈&#8202;4.4 minimises PLDS error, and a non-uniform grid refined near boundaries improves accuracy across all three schemes.</p>
             <div class="card__links">
               <a href="#">Report &rarr;</a>
               <a href="https://github.com/gianandrearossi/cfd-convection-diffusion" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
@@ -279,8 +279,8 @@
             <span class="card__tag">Computational</span>
             <h3 class="card__title">C-130 Hercules CFD Analysis</h3>
             <p class="card__date">2025 - 2026</p>
-            <p class="card__desc">CFD simulation of external flow around a Lockheed C-130 Hercules in Siemens Star-CCM+, covering angle-of-attack effects on lift and drag coefficients, and take-off performance.</p>
-            <p class="card__desc card__desc--more">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p class="card__desc">RANS-based CFD simulation of external aerodynamic flow around the Lockheed C-130 Hercules in STAR-CCM+, comparing k-&#949;, SST k-&#969;, and Reynolds Stress Model turbulence approaches across angle-of-attack and take-off studies on a 1.8M-cell half-domain mesh.</p>
+            <p class="card__desc card__desc--more">Grid independence was confirmed below 0.4% change in C&#8202;L and C&#8202;D between reference and fine meshes. Predicted stall angles differed by model - k-&#949; at 13.75°, RSM at 11.5°, SST k-&#969; at 10.25° - with k-&#949; delaying separation by overpredicting turbulent mixing via its isotropic Boussinesq assumption. RSM, solving all six Reynolds stress transport equations, gave the most physically credible prediction and the lowest take-off speeds (83.2&#8202;m/s at max payload, 62.1&#8202;m/s empty). SST k-&#969; offers the best accuracy-to-cost trade-off for parametric studies.</p>
             <div class="card__links">
               <a href="#">Report &rarr;</a>
             </div>
@@ -293,8 +293,8 @@
             <span class="card__tag">Mechanical Design</span>
             <h3 class="card__title">Low Emission Engine</h3>
             <p class="card__date">2024 - 2025</p>
-            <p class="card__desc">Led a 5-person team converting a petrol engine to run on an H&#8322;O&#8322; blend, achieving 15% NOx reduction and a 7% efficiency increase across design, testing and iteration.</p>
-            <p class="card__desc card__desc--more">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p class="card__desc">Mechanical design project modifying a Hyundai IC210X-20 single-cylinder petrol engine for compression auto-ignition (CAI), using hydrogen peroxide as a pilot fuel delivered via a custom dual port-side injection system alongside interchangeable piston crown inserts for variable compression ratio.</p>
+            <p class="card__desc card__desc--more">GT-Power 1D simulation confirmed a compression ratio of &#8805;&#8202;13 is required to reach 553&#8202;K at TDC for reliable CAI; two aluminium crown inserts (CR&#8202;11 and 13) were designed and FEA-verified with a minimum safety factor of 1.9 and a 174&#8202;K melting margin — boron nitride thermal paste reduces peak piston temperature from 830&#8202;K to ~&#8202;680&#8202;K. A CFD study across 15°–40° injection angles selected 20° as optimal; H&#8322;O&#8322; injection against the closed valve (0° crank) followed by petrol against the open valve (400° crank) gave the most uniform mixture distribution. CFD spray predictions were experimentally validated at 10,000&#8202;fps: penetration, velocity, and wall impingement (35–39&#8202;mm) all agreed within 1–2 standard deviations across six test cases.</p>
             <div class="card__links">
               <a href="assets/docs/DMT Report.pdf" target="_blank" rel="noopener noreferrer">Report &rarr;</a>
               <a href="assets/docs/DMT Poster.pdf" target="_blank" rel="noopener noreferrer">Poster &rarr;</a>
@@ -308,8 +308,8 @@
             <span class="card__tag">Research</span>
             <h3 class="card__title">Concentrating Solar Power Market Study</h3>
             <p class="card__date">2024 - 2025</p>
-            <p class="card__desc">Assessed the techno-economic position of Concentrating Solar Power in the energy market and forecast its role in industry relative to photovoltaics.</p>
-            <p class="card__desc card__desc--more">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p class="card__desc">Literature review assessing CSP's impact on the renewable energy market through a comparative analysis with photovoltaics, examining the economic, technical, and socio-political factors behind the divergence between the two technologies.</p>
+            <p class="card__desc card__desc--more">The IEA forecast CSP would generate ~30% as much energy as PV; by 2023 PV held a 36.5% share of global installed renewable capacity against CSP's 0.2%. CSP's LCOE fell 70% (2010–2023) but plateaued at ~$0.12/kWh post-COVID, while PV's dropped 90% to $0.044/kWh. Stricter site requirements (DNI &#8805;&#8202;1800 vs 1700&#8202;kWh/m&#178; for PV, max 2.1% slope), high water consumption, and poor scalability compound the gap. Thermal Energy Storage (molten salt, up to 13 hours post-sunset) is CSP's principal advantage but has not closed the market deficit. Hybrid CSP&#8202;+&#8202;PV plants emerge as the most viable path forward, with modelled LCOE reductions of up to 21% and combined ideal efficiencies of 61.7% vs ~40% standalone.</p>
             <div class="card__links">
               <a href="assets/docs/CSP Market Study.pdf" target="_blank" rel="noopener noreferrer">Report &rarr;</a>
             </div>
@@ -352,8 +352,8 @@
             <span class="card__tag">Computational</span>
             <h3 class="card__title">2D Wave Equation Solver</h3>
             <p class="card__date">2023 - 2024</p>
-            <p class="card__desc">Finite-difference solver for the 2D wave equation in Python, with 3D, contour and mid-plane slice visualisations and animated output.</p>
-            <p class="card__desc card__desc--more">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p class="card__desc">Python solver modelling sound wave propagation in a confined 2D room using the explicit finite-difference method on the 2D wave equation, with a Gaussian point source, Dirichlet reflecting-wall boundaries, and 3D surface, contour, and mid-plane slice visualisations.</p>
+            <p class="card__desc card__desc--more">The PDE is non-dimensionalised and discretised with central finite differences in time and space; the explicit stability criterion r&#8202;=&#8202;k&#178;/h&#178;&#8202;&#8804;&#8202;&#189; ties the time step to the mesh size. At the stability limit the stencil simplifies to u&#8201;&#8319;&#8314;&#185; = &#189;(four neighbours)&#8202;&#8722;&#8202;u&#8201;&#8319;&#8315;&#185;; a ghost-value approach handles the zero-velocity Neumann initial condition. On a 70-interval grid (h&#8202;=&#8202;0.0143, k&#8202;=&#8202;0.001, compute time 8.91&#8202;s) the solver correctly reproduces wall reflections and constructive/destructive interference. A 10&#215; mesh refinement increases compute time 130&#215;; a 50&#215; refinement diverges at k&#8202;=&#8202;0.001, demonstrating the explicit method's fundamental stability&#8202;&#8211;&#8202;accuracy&#8202;&#8211;&#8202;cost trade-off.</p>
             <div class="card__links">
               <a href="https://github.com/gianandrearossi/2d-acoustic-wave-solver" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
             </div>
@@ -366,8 +366,8 @@
             <span class="card__tag">Mechanical Design</span>
             <h3 class="card__title">Compressed Air Powered Car</h3>
             <p class="card__date">2023 - 2024</p>
-            <p class="card__desc">Designed, built and tested a compressed-air powered car, covering concept selection, mechanical design, manufacturing, and performance evaluation against design targets.</p>
-            <p class="card__desc card__desc--more">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p class="card__desc">Designed and manufactured a direct-drive compressed-air vehicle for a 20&#8202;m sprint race using a 2&#8202;L canister at 6.5&#8202;bar, centred on a 3D-printed impulse turbine driving the rear axle directly through a converging nozzle on a laser-cut acrylic chassis.</p>
+            <p class="card__desc card__desc--more">Three concepts (piston, turbine, direct propulsion) were assessed; a simplified Pelton-type impulse turbine was selected for 3D printability in ABS, low weight, and tolerance insensitivity. The built-in converging nozzle (area ratio 1/16) increases airflow momentum to 1.32&#8202;kg&#8202;&middot;&#8202;m/s; turbine torque of 0.42&#8202;Nm exceeds the 0.33&#8202;Nm required to overcome static friction, confirming direct drive is sufficient without gearing. Force-balance modelling predicts an 18&#8202;m range in under 3&#8202;s. Shaft stress analysis yields a safety factor of 75 (mild steel EN1A, peak principal stress 3.17&#8202;MPa), and bearing life is 3.7&#8202;&times;&#8202;10&#185;&#8304;&#8202;hours (SKF 61902), both far exceeding the 100&#8202;hour PDS requirement.</p>
             <div class="card__links">
               <a href="assets/docs/Compressed Air Powered Car.pdf" target="_blank" rel="noopener noreferrer">Report &rarr;</a>
             </div>
