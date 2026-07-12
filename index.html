@@ -52,7 +52,7 @@
       <h2 class="section__title">About</h2>
       <div class="about__lead">
         <p>I will start working as a Data Scientist at Bending Spoons in September.</p>
-        <p>I'm a MEng Mechanical Engineering graduate at Imperial College London, on track for First Class Honours. My interests sit at the intersection of engineering and the strategic and commercial decisions that shape it.</p>
+        <p>I just graduated from the MEng Mechanical Engineering course at Imperial College London with a First Class. My interests sit at the intersection of engineering and the strategic and commercial decisions that shape it.</p>
         <p class="about__meta">Currently in London.</p>
       </div>
     </section>
@@ -220,8 +220,8 @@
             <p class="card__desc">MEng thesis: a novel electrochemical heat pump design aimed at increasing efficiency and reducing environmental damage compared with conventional systems.</p>
             <p class="card__desc card__desc--more">The validated Python model showed that low &phi;, current, and &Delta;T together define the high-COP operating region, but this region corresponds to near-zero heating power. Cascading 3&ndash;5 Brayton cycles resolves the trade-off, lifting heating power by up to +365% for only a 2% COP penalty, with absolute COP values (11&ndash;18) three to five times those of standard VCHPs.</p>
             <div class="card__links">
-              <a href="#">Report &rarr;</a>
-              <a href="#">GitHub &rarr;</a>
+              <a href="assets/docs/FYP Report.pdf" target="_blank" rel="noopener noreferrer">Report &rarr;</a>
+              <a href="https://github.com/gianandrearossi/Novel-Heat-Pump-Design-Cascaded-Electrochemical-Cells" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
             </div>
           </div>
         </article>
@@ -232,11 +232,11 @@
             <span class="card__tag">Computational</span>
             <h3 class="card__title">Battery Behaviour Model</h3>
             <p class="card__date">2025 - 2026</p>
-            <p class="card__desc">Modelled battery electrical behaviour under three levels of complexity, with comparative analysis of charge/discharge dynamics.</p>
-            <p class="card__desc card__desc--more">A single resistor (R&#8202;=&#8202;19.1&#8202;m&Omega;) captured only the instantaneous voltage drop; a fitted RC pair added diffusion dynamics; and an Arrhenius-coupled thermal model (E&#8202;=&#8202;22,000&#8202;J/mol, h&#8202;=&#8202;41.15&#8202;W/m&sup2;K) tracked resistance growth with cell heating. A degradation model predicted capacity-limited lifetimes of 6.25, 4.64, and 2.20 years for Oslo, London, and Dubai &mdash; all short of an 8-year warranty.</p>
+            <p class="card__desc">Modelled battery electrical behaviour under three levels of complexity, comparing charge/discharge dynamics.</p>
+            <p class="card__desc card__desc--more">A single resistor (R&#8202;=&#8202;19.1&#8202;m&Omega;) captured only the instantaneous voltage drop; a fitted RC pair added diffusion dynamics; and an Arrhenius-coupled thermal model (E&#8202;=&#8202;22,000&#8202;J/mol, h&#8202;=&#8202;41.15&#8202;W/m&sup2;K) tracked resistance growth with cell heating. A degradation model predicted capacity-limited lifetimes of 6.25, 4.64, and 2.20 years for Oslo, London, and Dubai. Group project with 4 other students.</p>
             <div class="card__links">
-              <a href="#">Report &rarr;</a>
-              <a href="#">GitHub &rarr;</a>
+              <!-- <a href="#">Report &rarr;</a> -->
+              <a href="https://github.com/gianandrearossi/Battery-Behaviour-Model" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
             </div>
           </div>
         </article>
@@ -264,7 +264,7 @@
             <p class="card__desc">Implemented and benchmarked three FVM discretisation schemes - CDS, UDS, and PLDS - for the steady 1-D convection-diffusion equation in Python, solved via the Tri-Diagonal Matrix Algorithm and validated against the analytical solution.</p>
             <p class="card__desc card__desc--more">CDS is accurate at Pe&#8202;&lt;&#8202;2 but diverges above that threshold; UDS is unconditionally stable but introduces numerical diffusion causing a systematic offset (error 0.5–5%); PLDS offers the best compromise, remaining stable across all conditions with errors of 0.001–1%. An optimal local Pe&#8202;≈&#8202;4.4 minimises PLDS error, and a non-uniform grid refined near boundaries improves accuracy across all three schemes.</p>
             <div class="card__links">
-              <a href="#">Report &rarr;</a>
+              <!-- <a href="#">Report &rarr;</a> -->
               <a href="https://github.com/gianandrearossi/cfd-convection-diffusion" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
             </div>
           </div>
@@ -295,7 +295,7 @@
             <p class="card__desc">RANS-based CFD simulation of external aerodynamic flow around the Lockheed C-130 Hercules in STAR-CCM+, comparing k-&#949;, SST k-&#969;, and Reynolds Stress Model turbulence approaches across angle-of-attack and take-off studies on a 1.8M-cell half-domain mesh.</p>
             <p class="card__desc card__desc--more">Grid independence was confirmed below 0.4% change in C&#8202;L and C&#8202;D. k-&#949; predicts stall at 13.75°, RSM at 11.5°, SST k-&#969; at 10.25° — k-&#949; delays separation by overpredicting turbulent mixing via its isotropic Boussinesq assumption. RSM gave the most physically credible prediction (take-off: 83.2&#8202;m/s at max payload); SST k-&#969; offers the best accuracy-to-cost trade-off.</p>
             <div class="card__links">
-              <a href="#">Report &rarr;</a>
+              <a href="assets/docs/CFD Pres.pdf" target="_blank" rel="noopener noreferrer">Presentation &rarr;</a>
             </div>
           </div>
         </article>
@@ -338,7 +338,7 @@
             <p class="card__desc">Monte Carlo reliability simulation (MTTF 73.6 h across 10k iterations); confidence interval benchmarking of t-distribution vs. Gaussian methods; and linear regression of PM10 air quality against wind speed (R²&nbsp;=&nbsp;0.167, &alpha;&nbsp;=&nbsp;41.5, &beta;&nbsp;=&nbsp;&minus;7.4&nbsp;µg&nbsp;m⁻³ per m/s).</p>
             <p class="card__desc card__desc--more"></p>
             <div class="card__links">
-              <a href="#">Report &rarr;</a>
+              <!-- <a href="#">Report &rarr;</a> -->
             </div>
           </div>
         </article>

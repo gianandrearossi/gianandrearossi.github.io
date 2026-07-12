@@ -208,6 +208,7 @@ a { color: inherit; text-decoration: none; }
 .card__thumb:has(img) { background: #ffffff; }
 .card__thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
 .card__thumb img[src*="proj-wind-farm"] { object-fit: cover; }
+.card__thumb img[src*="proj-air-car"] { object-fit: cover; }
 .card__body { padding: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
 .card__tag { font-family: var(--f-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-2); }
 .card__title { font-family: var(--f-display); font-weight: 500; font-size: 1.2rem; }
