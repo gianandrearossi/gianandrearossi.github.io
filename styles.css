@@ -135,13 +135,12 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---------- ABOUT ---------- */
-.about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; }
 .about__lead p + p { margin-top: 1rem; }
 .about__lead p { font-size: 1.05rem; }
 .about__meta { font-family: var(--f-mono); font-size: 0.85rem; color: var(--slate); margin-top: 1.5rem !important; }
-.about__edu h3 { font-family: var(--f-display); font-weight: 500; margin-bottom: 1rem; }
-.edu-item { padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
-.edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+/* ---------- EDUCATION ---------- */
+.education { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; }
 .edu-item__degree { font-weight: 600; }
 .edu-item__school { color: var(--slate); }
 .edu-item__years { font-family: var(--f-mono); font-size: 0.8rem; color: var(--accent); margin: 0.3rem 0; }
@@ -316,7 +315,7 @@ a { color: inherit; text-decoration: none; }
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 720px) {
   .nav__links { display: none; }
-  .about { grid-template-columns: 1fr; }
+  .education { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
